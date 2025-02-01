@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pixel Egg Timer</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <div class="container">
+    <h1>EGG TIMER</h1>
+    <div class="eggs">
+      <div class="egg soft" onclick="startTimer(300)"></div>
+      <div class="egg medium" onclick="startTimer(420)"></div>
+      <div class="egg hard" onclick="startTimer(540)"></div>
+      <div class="egg cooled" onclick="startTimer(600)"></div>
+    </div>
+    <div id="timer">00:00</div>
+    <button onclick="resetTimer()">RESET</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
