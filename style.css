@@ -24,13 +24,60 @@ h1 {
   margin: 30px 0;
 }
 
+/* Pixel Egg Styling */
 .egg {
-  width: 80px;
-  height: 100px;
+  width: 40px;
+  height: 50px;
   margin: 0 auto;
   cursor: pointer;
-  /* Pixel art styling */
+  position: relative;
   image-rendering: pixelated;
+  /* Base egg shape */
+  background: #f5e6ca;
+  box-shadow: 
+    /* Outline */
+    0px 0px 0px 2px #000,
+    /* Pixel art details */
+    /* Row 1 */
+    12px 8px 0 0 #000,
+    16px 8px 0 0 #000,
+    /* Row 2 */
+    8px 12px 0 0 #000,
+    20px 12px 0 0 #000,
+    /* Row 3 */
+    4px 16px 0 0 #000,
+    24px 16px 0 0 #000,
+    /* Row 4 */
+    0px 20px 0 0 #000,
+    28px 20px 0 0 #000,
+    /* Bottom curve */
+    4px 24px 0 0 #000,
+    24px 24px 0 0 #000;
+}
+
+/* Color variations */
+.egg.soft { background: #f5e6ca; } 
+.egg.medium { background: #e5b783; }
+.egg.hard { background: #d18b47; }
+.egg.cooled { 
+  background: #8b4513; 
+  /* Cracked effect */
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 4px;
+    background: #000;
+    top: 30px;
+    left: 16px;
+    box-shadow: 2px 2px 0 0 #000;
+  }
+}
+
+/* Hover animation */
+.egg:hover {
+  transform: scale(1.1);
+  transition: 0.2s;
 }
 
 .soft { background: #f5e6ca; /* Soft egg color */ }
